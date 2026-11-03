@@ -1,0 +1,129 @@
+{
+  "root": 0,
+  "next_id": 6,
+  "rules": {
+    "0": {
+      "id": 0,
+      "kondisi": [],
+      "kesimpulan": "Naik TransJakarta",
+      "kasus_kunci": null,
+      "true": 1,
+      "false": null
+    },
+    "1": {
+      "id": 1,
+      "kondisi": [
+        {
+          "atribut": "jarak_km",
+          "op": ">",
+          "nilai": 25
+        }
+      ],
+      "kesimpulan": "Naik KRL",
+      "kasus_kunci": {
+        "jarak_km": 40,
+        "budget_rp": 30000,
+        "jam_berangkat": 7,
+        "jumlah_orang": 1,
+        "waktu_maks_menit": 90,
+        "barang_bawaan": "sedikit",
+        "cuaca": "cerah",
+        "tujuan": "kerja"
+      },
+      "true": 2,
+      "false": 3
+    },
+    "2": {
+      "id": 2,
+      "kondisi": [
+        {
+          "atribut": "tujuan",
+          "op": "=",
+          "nilai": "bandara"
+        }
+      ],
+      "kesimpulan": "Naik KA Bandara",
+      "kasus_kunci": {
+        "jarak_km": 30,
+        "budget_rp": 200000,
+        "jam_berangkat": 10,
+        "jumlah_orang": 1,
+        "waktu_maks_menit": 120,
+        "barang_bawaan": "banyak",
+        "cuaca": "cerah",
+        "tujuan": "bandara"
+      },
+      "true": null,
+      "false": 5
+    },
+    "3": {
+      "id": 3,
+      "kondisi": [
+        {
+          "atribut": "waktu_maks_menit",
+          "op": "<=",
+          "nilai": 40
+        }
+      ],
+      "kesimpulan": "Naik MRT",
+      "kasus_kunci": {
+        "jarak_km": 12,
+        "budget_rp": 30000,
+        "jam_berangkat": 8,
+        "jumlah_orang": 1,
+        "waktu_maks_menit": 30,
+        "barang_bawaan": "sedikit",
+        "cuaca": "cerah",
+        "tujuan": "kerja"
+      },
+      "true": null,
+      "false": 4
+    },
+    "4": {
+      "id": 4,
+      "kondisi": [
+        {
+          "atribut": "jumlah_orang",
+          "op": ">",
+          "nilai": 3
+        }
+      ],
+      "kesimpulan": "Naik taksi",
+      "kasus_kunci": {
+        "jarak_km": 8,
+        "budget_rp": 150000,
+        "jam_berangkat": 14,
+        "jumlah_orang": 4,
+        "waktu_maks_menit": 60,
+        "barang_bawaan": "sedikit",
+        "cuaca": "hujan",
+        "tujuan": "wisata"
+      },
+      "true": null,
+      "false": null
+    },
+    "5": {
+      "id": 5,
+      "kondisi": [
+        {
+          "atribut": "jam_berangkat",
+          "op": ">",
+          "nilai": 22
+        }
+      ],
+      "kesimpulan": "Naik taksi",
+      "kasus_kunci": {
+        "jarak_km": 45,
+        "budget_rp": 300000,
+        "jam_berangkat": 23,
+        "jumlah_orang": 1,
+        "waktu_maks_menit": 90,
+        "barang_bawaan": "sedikit",
+        "cuaca": "cerah",
+        "tujuan": "kerja"
+      },
+      "true": null,
+      "false": null
+    }
+  }
+}

@@ -1,0 +1,4 @@
+# Knowledge base aktif, dibuat otomatis saat program dijalankan
+KB/kb.json
+__pycache__/
+*.pyc

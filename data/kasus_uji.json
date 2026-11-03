@@ -1,0 +1,50 @@
+[
+  {
+    "nama": "Kasus 1 - pekerja jarak dekat",
+    "catatan": "Pakar setuju TransJakarta.",
+    "kasus": {"jarak_km": 10, "budget_rp": 20000, "jam_berangkat": 9, "jumlah_orang": 1, "waktu_maks_menit": 60,
+              "barang_bawaan": "sedikit", "cuaca": "cerah", "tujuan": "kerja"}
+  },
+  {
+    "nama": "Kasus 2 - komuter dari Bogor",
+    "catatan": "Pakar ingin Naik KRL. Kondisi: jarak_km > 25.",
+    "kasus": {"jarak_km": 40, "budget_rp": 30000, "jam_berangkat": 7, "jumlah_orang": 1, "waktu_maks_menit": 90,
+              "barang_bawaan": "sedikit", "cuaca": "cerah", "tujuan": "kerja"}
+  },
+  {
+    "nama": "Kasus 3 - ke bandara dari jauh",
+    "catatan": "Pakar ingin Naik KA Bandara. Kondisi: tujuan = bandara (menjadi true-child R1).",
+    "kasus": {"jarak_km": 30, "budget_rp": 200000, "jam_berangkat": 10, "jumlah_orang": 1, "waktu_maks_menit": 120,
+              "barang_bawaan": "banyak", "cuaca": "cerah", "tujuan": "bandara"}
+  },
+  {
+    "nama": "Kasus 4 - pekerja terburu-buru",
+    "catatan": "Pakar ingin Naik MRT. Kondisi: waktu_maks_menit <= 40 (menjadi false-child R1).",
+    "kasus": {"jarak_km": 12, "budget_rp": 30000, "jam_berangkat": 8, "jumlah_orang": 1, "waktu_maks_menit": 30,
+              "barang_bawaan": "sedikit", "cuaca": "cerah", "tujuan": "kerja"}
+  },
+  {
+    "nama": "Kasus 5 - rombongan wisata saat hujan",
+    "catatan": "Pakar ingin Naik taksi. Kondisi: jumlah_orang > 3 (menjadi false-child R3).",
+    "kasus": {"jarak_km": 8, "budget_rp": 150000, "jam_berangkat": 14, "jumlah_orang": 4, "waktu_maks_menit": 60,
+              "barang_bawaan": "sedikit", "cuaca": "hujan", "tujuan": "wisata"}
+  },
+  {
+    "nama": "Kasus 6 - pulang larut malam jarak jauh",
+    "catatan": "Pakar ingin Naik taksi karena KRL sudah tidak beroperasi. Kondisi: jam_berangkat > 22 (menjadi false-child R2).",
+    "kasus": {"jarak_km": 45, "budget_rp": 300000, "jam_berangkat": 23, "jumlah_orang": 1, "waktu_maks_menit": 90,
+              "barang_bawaan": "sedikit", "cuaca": "cerah", "tujuan": "kerja"}
+  },
+  {
+    "nama": "Kasus 7 - uji: komuter pagi",
+    "catatan": "Seharusnya sistem langsung menjawab Naik KRL. Pakar setuju.",
+    "kasus": {"jarak_km": 50, "budget_rp": 25000, "jam_berangkat": 6, "jumlah_orang": 1, "waktu_maks_menit": 100,
+              "barang_bawaan": "tidak", "cuaca": "hujan", "tujuan": "kerja"}
+  },
+  {
+    "nama": "Kasus 8 - uji: perjalanan singkat mendesak",
+    "catatan": "Seharusnya sistem langsung menjawab Naik MRT. Pakar setuju.",
+    "kasus": {"jarak_km": 6, "budget_rp": 15000, "jam_berangkat": 17, "jumlah_orang": 1, "waktu_maks_menit": 20,
+              "barang_bawaan": "tidak", "cuaca": "cerah", "tujuan": "kerja"}
+  }
+]
